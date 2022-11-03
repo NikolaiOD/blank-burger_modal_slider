@@ -1,0 +1,142 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(94, 99, 99, 0.7);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform $transition-time $transition-timing-function,
+    visibility $transition-time $transition-timing-function, opacity $transition-time $transition-timing-function;
+}
+
+.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  width: 320px;
+  height: 449px;
+
+  background-color: $primary-yellow-accent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 1;
+  visibility: visible;
+  transition: transform $transition-time $transition-timing-function,
+    visibility $transition-time $transition-timing-function, opacity $transition-time $transition-timing-function;
+
+  @include tablet {
+    width: 458px;
+  }
+
+  &__container {
+    padding: 32px 20px;
+
+    @include tablet {
+      padding: 32px 32px;
+    }
+  }
+}
+
+// FORM
+.modal__title {
+  font-weight: 700;
+  @include fontSize(24px, 1.2);
+
+  color: $primary-text-color;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.close-modal-btn__icon {
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  background-color: $white-color;
+  border-radius: 50%;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    outline: transparent;
+    width: 280px;
+    height: 48px;
+    background: $white-color;
+    border: 1px solid $secondary-green-accent;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    margin-top: 2px;
+
+    padding: 14px 0 14px 12px;
+    font-weight: 400;
+    @include fontSize(16px, 1.25);
+
+    @include tablet {
+      width: 394px;
+    }
+
+    &:not(:placeholder-shown):valid {
+      border-color: $secondary-green-accent;
+    }
+
+    &:not(:placeholder-shown):invalid {
+      border-color: $error-color;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    background: $white-color;
+    color: $primary-text-color;
+    border: 2px solid $secondary-green-accent;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 38px;
+    margin-top: 8px;
+    transition: background-color $transition-time $transition-timing-function;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $primary-green-accent;
+    }
+  }
+}
+
+.form__title {
+  font-weight: 500;
+  @include fontSize(16px, 1.4);
+  color: $primary-text-color;
+  margin-bottom: 24px;
+}

@@ -1,9 +1,17 @@
-// набор шрифтов
+// Colors
+$primary-text-color: #2c2c2c;
+$primary-background-color: #f5f5f5;
+$secondary-background-color: #fefefe;
+$primary-yellow-accent: #ffe550;
+$primary-green-accent: #bbf330;
+$secondary-green-accent: #7eb101;
+$button-hover-color: #b5ff00;
+$dark-green-color: #597d00;
+$placeholder-color: #505050;
+$error-color: #ff705d;
+$white-color: #fff;
+$black-color: #000;
 
-// $primaryFont: "Roboto", sans-serif;
-// $secondaryFont: "Raleway", sans-serif;
-
-// палитра цветов
-
-// $primary-text-color: #212121;
-// $white-background-color: #ffffff;
+// Transition
+$transition-timing-function: linear;
+$transition-time: 300ms;

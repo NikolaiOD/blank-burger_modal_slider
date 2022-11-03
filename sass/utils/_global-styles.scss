@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    // color: $primary-text-color;
-    // background-color: $primary-background-color;
+    color: $primary-text-color;
+    background-color: $primary-background-color;
     min-width: 320px;
 }
 
@@ -11,10 +11,8 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul {
+p {
     margin: 0;
-    padding: 0;
 }
 
 img {
@@ -24,9 +22,12 @@ img {
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
+// Add this class to remove underlining from links
 .link {
     text-decoration: none;
 }
@@ -49,9 +50,11 @@ ul {
 
     @include tablet {
         max-width: 768px;
+        padding: 0 32px;
     }
 
     @include desktop {
         max-width: 1280px;
+        padding: 0 16px;
     }
 }

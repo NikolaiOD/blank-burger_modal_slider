@@ -1,0 +1,70 @@
+.close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: $primary-text-color;
+  transition: transform $transition-time $transition-timing-function;
+}
+
+.close-btn__icon {
+  box-shadow: inset 2px 1px 4px rgba(61, 61, 61, 0.1);
+}
+
+.menu-mob {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 145px;
+  height: 255px;
+  z-index: 999;
+  border-radius: 30px 0 30px 30px;
+  background-color: $secondary-background-color;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  transform: translateX(100%);
+  transition: transform $transition-time $transition-timing-function;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-mob.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-mob__list {
+  @include fontSize(16px, 1.19);
+}
+
+.menu-mob__item {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  background-color: $secondary-background-color;
+  transition: background-color $transition-time $transition-timing-function;
+}
+
+.menu-mob__item:first-child {
+  border-radius: 30px 0 0 0;
+}
+
+.menu-mob__item:last-child {
+  border-radius: 0 0 30px 30px;
+}
+
+.menu-mob__link {
+  color: $primary-text-color;
+}
+
+.menu-mob__item:hover,
+.menu-mob__item:focus,
+.menu-mob__item:active {
+  background-color: $primary-green-accent;
+}

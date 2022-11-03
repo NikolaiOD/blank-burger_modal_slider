@@ -1,0 +1,130 @@
+.hero {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  .draggable {
+    border-radius: 50%;
+  }
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  @include desktop {
+    padding-top: 14px;
+  }
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    position: relative;
+    height: 409px;
+  }
+}
+
+.hero__title {
+  @include fontSize(28px, 1.18);
+  max-width: 502px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    @include fontSize(42px, 1.2);
+    max-width: 537px;
+    margin-bottom: 44px;
+  }
+
+  @include desktop {
+    @include fontSize(48px, 1.2);
+  }
+}
+
+.hero__text {
+  @include fontSize(14px, 1.5);
+  max-width: 502px;
+  margin-bottom: 28px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 336px;
+  }
+
+  @include tablet {
+    @include fontSize(16px, 1.5);
+    margin-bottom: 40px;
+  }
+}
+
+.slider {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    width: 320px;
+  }
+  @include tablet {
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 292px;
+    }
+
+    .slick-arrow {
+      z-index: 10;
+      width: 34px;
+      height: 28px;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      background-position: center !important;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
+      left: -25px;
+      background: url('../images/arrow/slick-prev_.svg');
+      transition: background $transition-time $transition-timing-function;
+      &:hover {
+        background: url('../images/arrow/slick-prev-hover.svg');
+      }
+    }
+    .slick-next {
+      right: -25px;
+      background: url('../images/arrow/slick-next_.svg');
+      transition: background $transition-time $transition-timing-function;
+      &:hover {
+        background: url('../images/arrow/slick-next-hover.svg');
+      }
+    }
+  }
+  @include desktop {
+    position: relative;
+
+    &__img {
+      width: 528px;
+    }
+
+    .slick-arrow {
+      width: 48px;
+      height: 40px;
+    }
+
+    .slick-prev {
+      left: -37px;
+    }
+    .slick-next {
+      right: -37px;
+    }
+  }
+}

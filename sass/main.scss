@@ -1,6 +1,9 @@
-// @import './utils/mixins';
-// @import './utils/variables';
-// @import './utils/global-styles';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/global-styles';
+@import './utils/buttons';
 
-// @import './layout/header';
-// @import './layout/footer';
+@import './layout/header';
+@import './layout/mobile-menu';
+@import './layout/modal';
+@import './layout/hero';
