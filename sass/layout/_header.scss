@@ -1,18 +1,10 @@
 .header {
-    background: $secondary-background-color;
-    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+    background: #fefefe;
     height: 72px;
 }
 
 .logo {
     padding: 10px 0;
-    transform: rotate(0);
-    transition: transform 250ms linear;
-}
-
-.logo:hover,
-.logo:focus {
-    transform: rotate(25deg);
 }
 
 .nav-site {
@@ -22,17 +14,6 @@
 
 .nav-site__item:not(:first-child) {
     margin-left: 28px;
-}
-
-.nav-site__item {
-    color: $primary-text-color;
-    transition: color $transition-time $transition-timing-function;
-}
-
-.nav-site__item:hover,
-.nav-site__item:focus,
-.nav-site__item:active {
-    color: $primary-green-accent;
 }
 
 .nav-site__list {
@@ -55,14 +36,13 @@
     text-decoration: none;
     padding: 28px 0;
     @include fontSize(14px, 1.14);
-    color: $primary-text-color;
-    transition: color $transition-time $transition-timing-function;
+    color: #2c2c2c;
 }
 
 .nav-site__link:hover,
 .nav-site__link:focus,
 .nav-site__link:active {
-    color: $primary-green-accent;
+    color: #bbf330;
     text-decoration-line: underline;
 }
 
@@ -80,13 +60,12 @@
     margin-left: auto;
     border: none;
     background: none;
-    color: $secondary-green-accent;
-    transition: color $transition-time $transition-timing-function;
+    color: #7eb101;
 
     &:hover,
     &:focus,
     &:active {
-        color: $primary-yellow-accent;
+        color: #ffe550;
     }
 }
 

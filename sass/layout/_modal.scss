@@ -11,9 +11,6 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-  transition: transform $transition-time $transition-timing-function,
-    visibility $transition-time $transition-timing-function, opacity $transition-time $transition-timing-function;
 }
 
 .is-hidden .modal {
@@ -30,7 +27,7 @@
   width: 320px;
   height: 449px;
 
-  background-color: $primary-yellow-accent;
+  background-color: #ffe550;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 30px;
   top: 50%;
@@ -39,8 +36,6 @@
 
   opacity: 1;
   visibility: visible;
-  transition: transform $transition-time $transition-timing-function,
-    visibility $transition-time $transition-timing-function, opacity $transition-time $transition-timing-function;
 
   @include tablet {
     width: 458px;
@@ -60,7 +55,7 @@
   font-weight: 700;
   @include fontSize(24px, 1.2);
 
-  color: $primary-text-color;
+  color: #2c2c2c;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -69,7 +64,7 @@
   width: 32px;
   height: 32px;
   align-items: center;
-  background-color: $white-color;
+  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -80,7 +75,6 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form {
@@ -91,8 +85,8 @@
     outline: transparent;
     width: 280px;
     height: 48px;
-    background: $white-color;
-    border: 1px solid $secondary-green-accent;
+    background: #fff;
+    border: 1px solid #7eb101;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     margin-top: 2px;
@@ -106,30 +100,29 @@
     }
 
     &:not(:placeholder-shown):valid {
-      border-color: $secondary-green-accent;
+      border-color: #7eb101;
     }
 
     &:not(:placeholder-shown):invalid {
-      border-color: $error-color;
+      border-color: #ff705d;
     }
   }
 
   &__button {
     display: inline-block;
-    background: $white-color;
-    color: $primary-text-color;
-    border: 2px solid $secondary-green-accent;
+    background: #fff;
+    color: #2c2c2c;
+    border: 2px solid #7eb101;
     border-radius: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 38px;
     margin-top: 8px;
-    transition: background-color $transition-time $transition-timing-function;
 
     &:hover,
     &:focus,
     &:active {
-      background-color: $primary-green-accent;
+      background-color: #bbf330;
     }
   }
 }
@@ -137,6 +130,6 @@
 .form__title {
   font-weight: 500;
   @include fontSize(16px, 1.4);
-  color: $primary-text-color;
+  color: #2c2c2c;
   margin-bottom: 24px;
 }
